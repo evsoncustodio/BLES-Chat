@@ -1,0 +1,45 @@
+{
+  "name": "bles-chat",
+  "version": "1.0.0",
+  "description": "Chat de demonstração utilizando Socket.io para BLES",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production MONGODB_URI='mongodb://mongo.bles:27017/bles-chat' DEBUG=bles-chat:* nodemon -V server.js",
+    "local": "cross-env DEBUG=bles-chat:* nodemon -V server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evsoncustodio/BLES-Chat.git"
+  },
+  "keywords": [
+    "BLES",
+    "Node",
+    "Socket.io"
+  ],
+  "author": "evsoncustodio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evsoncustodio/BLES-Chat/issues"
+  },
+  "homepage": "https://github.com/evsoncustodio/BLES-Chat#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "gridfs-stream": "^1.1.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.6.0",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "serve-favicon": "^2.5.0",
+    "serve-static": "^1.14.1",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  }
+}

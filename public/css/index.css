@@ -1,0 +1,33 @@
+.background-gradient {
+    background-image: linear-gradient(to right, white, gray)
+}
+
+.header {
+    height: 8em;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.footer {
+    height: 5em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.margin-content {
+    margin-top: 9em;
+    margin-bottom: 6em;
+}
+
+.profileImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.scrollDivY {
+    max-height: 450px;
+    overflow-y: scroll;
+}
