@@ -17,7 +17,7 @@ export class ChatController {
         })
         .catch(error => console.log(error));
 
-        this.socket = io.connect('http://127.0.0.1:7777/chat');
+        this.socket = io.connect('http://chat.bles:7777/chat');
         // this.socket = socket;
 
         this.socket.on('receiver message', body => {

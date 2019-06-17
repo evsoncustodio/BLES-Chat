@@ -27,7 +27,7 @@ function createServer(port) {
             });
 
             server.listen(app.get('port'), '0.0.0.0', () => {
-                debug('Listenning: http://127.0.0.1:' + app.get('port'));
+                debug('Listenning: http://chat.bles:' + app.get('port'));
             });
 
             resolve(api);
