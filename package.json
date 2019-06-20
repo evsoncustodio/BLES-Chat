@@ -4,8 +4,8 @@
   "description": "Chat de demonstração utilizando Socket.io para BLES",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production MONGODB_URI='mongodb://mongo.bles:27017/bles-chat' DEBUG=bles-chat:* nodemon -V server.js",
-    "local": "cross-env DEBUG=bles-chat:* nodemon -V server.js"
+    "start": "npm install && cross-env NODE_ENV=production DEBUG=bles-chat:* nodemon -V server.js",
+    "dev": "cross-env NODE_ENV=development DEBUG=bles-chat:* nodemon -V server.js"
   },
   "repository": {
     "type": "git",

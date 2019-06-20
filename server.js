@@ -1,8 +1,9 @@
 const debug = require('debug')('bles-chat:server');
 const http = require('http');
-const port = process.env.PORT || '7777';
+const port = process.env.PORT || '8888';
 const env = require('./config/env')[process.env.NODE_ENV || 'development'];
 const express = require('./config/express');
+const os = require('os');
 
 function createServer(port) {
     return new Promise((resolve, reject) => {
@@ -27,7 +28,8 @@ function createServer(port) {
             });
 
             server.listen(app.get('port'), '0.0.0.0', () => {
-                debug('Listenning: http://chat.bles:' + app.get('port'));
+                Object.keys(os.networkInterfaces()).map(key => os.networkInterfaces()[key].filter(i => i.family == 'IPv4')[0].address)
+                .forEach(ip => debug(`Listenning: http://${ip}:${app.get('port')}`));
             });
 
             resolve(api);
